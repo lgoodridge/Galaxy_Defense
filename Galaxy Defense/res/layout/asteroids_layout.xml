@@ -1,0 +1,29 @@
+<com.fffan911.galaxy_defense.View.Layouts.AsteroidsLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <fragment
+        android:id="@+id/asteroids_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.AsteroidsFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="75"
+        tools:layout="@layout/asteroids_fragment_layout" >
+        
+    </fragment>
+    
+    <fragment
+        android:id="@+id/asteroids_side_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.AsteroidsSideFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        tools:layout="@layout/asteroids_side_fragment_layout" >
+        
+    </fragment>
+
+</com.fffan911.galaxy_defense.View.Layouts.AsteroidsLayout>

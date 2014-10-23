@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/save_menu_item" 
+        android:enabled="true" 
+        android:title="@string/save_menu_item_title" 
+        android:checkable="false" 
+        android:visible="true" 
+        android:checked="false"
+        android:icon="@drawable/ic_menu_save">
+    </item>
+    
+    <item 
+        android:id="@+id/main_menu_menu_item" 
+        android:enabled="true" 
+        android:title="@string/main_menu_menu_item_title" 
+        android:checkable="false" 
+        android:visible="true" 
+        android:checked="false"
+        android:icon="@drawable/ic_menu_main_menu">
+    </item>
+    
+    <item 
+        android:id="@+id/exit_app_menu_item" 
+        android:enabled="true" 
+        android:title="@string/exit_app_menu_item_title" 
+        android:checkable="false" 
+        android:visible="true" 
+        android:checked="false"
+        android:icon="@drawable/ic_menu_exit_app">
+    </item>
+    
+</menu>

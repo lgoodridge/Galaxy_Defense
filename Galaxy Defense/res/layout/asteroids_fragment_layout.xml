@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.AsteroidsFragmentLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.fffan911.galaxy_defense.View.Customs.AsteroidsPanel
+        android:id="@+id/asteroids_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+</com.fffan911.galaxy_defense.View.Layouts.AsteroidsFragmentLayout>

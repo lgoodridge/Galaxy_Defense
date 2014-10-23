@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.BlueprintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+    
+    <fragment
+        android:id="@+id/display_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.DisplayFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        tools:layout="@layout/display_fragment_layout" >
+    </fragment>
+    
+    <fragment
+        android:id="@+id/information_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.InformationFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        tools:layout="@layout/information_fragment_layout" >
+    </fragment>
+    
+</com.fffan911.galaxy_defense.View.Layouts.BlueprintLayout>

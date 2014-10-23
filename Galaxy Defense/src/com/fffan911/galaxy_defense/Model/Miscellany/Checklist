@@ -1,0 +1,37 @@
+Things to Do:
+
+Immediate Tasks:
+- Implement a way to adjust a Weapon's Element level(s) from Weapon or Ship / Composites
+- Incorporate Elements into Weapon , etc.
+- Have Elements exhibit their background animation when active
+- Fix addElement() in Ship: when an element is already active, decide what to do
+
+Background Tasks:
+- Test SpecialWeapon upgrades and evolutions
+- Implement Element Levels in Composite (esp. Core and WeaponBarrels)
+- Use "getEquipment..." methods instead of for loops in Ship
+- Fix Activity Switching issue (see StoryStage_0_2 victory task issue)
+- Make a 'Continue' Button in Shop
+- Make Music Player class[es?] (MediaPlayer, SoundPool, AudioStream)
+- Have moveTo in Position accelerate as well
+- Implement a console (to type in passwords, add items, other abilities)
+- Implement a loading screen
+- Make Currently Equipped Weapon Textfield for Side Panel
+- Make ship wait to finish turning before starting to shoot
+- Make Stage victory animation + Stage defeat / Game Over Screen
+- Create Damage Animations
+- Change "Controls" to "Manual"
+- Fill out controls and element tabs under Manual
+- Make SideJoystick less sticky (sticks when it goes past left/top side)
+- Make WeaponButtons less sticky (fix something with multitouch)
+- Create ObjectData
+- Fix HealthBar redraw-er to have less of an FPS impact
+- Fix trembling that occurs while paused
+- Make better joystick decorations (or request them)
+- Figure out what to do with GameThread free time
+
+Things to Eventually Remove:
+- Take "Bounds Bouncing" out of StandardBattleAI and StandardAsteroidsAI
+- Remove Player ship damaging when Health Bar is touched
+- Possibly take GameMode switching out of Story / Arcade / Menu Buttons
+- Make getDetailsAndUpgrades a standard method, not a Composite class static method

@@ -1,0 +1,172 @@
+Drafts:
+
+Old Display Panel Thread Code:
+
+package com.fffan911.galaxy_defense.Model.Miscellany;
+
+import java.text.DecimalFormat;
+
+import com.fffan911.galaxy_defense.Model.Data.GameData;
+import com.fffan911.galaxy_defense.Model.Stages.Stage;
+import com.fffan911.galaxy_defense.View.Customs.GamePanel;
+
+import android.graphics.Canvas;
+import android.util.Log;
+import android.view.SurfaceHolder;
+
+public class GameThread extends Thread {
+	//References
+	private SurfaceHolder holder;
+	private Stage stage;
+	//Attributes
+	private long lastUpdateTime;
+	private long updateTimeDiff;
+	private boolean isRunning;
+	//FPS Reading Stuff
+	private DecimalFormat df = new DecimalFormat("0.##");
+	private long lastStatusStore = 0l;
+	private long statusIntervalTimer = 0l;
+	private long totalFramesSkipped = 0l;
+	private long framesSkippedPerStatCycle = 0l;
+	private long totalFrameCount = 0l;
+	private long statsCount = 0l;
+	private int frameCountPerStatCycle = 0;
+	private double averageFps = 0.0;
+	private double[] fpsStore;
+	private final static int STAT_INTERVAL = 1000;
+	private final static int FPS_HISTORY_NR = 10;
+	//Constants
+	private static final int MAX_FPS = 40;
+	private static final int MAX_FRAME_SKIPS = 5;
+	private static final int FRAME_PERIOD = 1000 / MAX_FPS;
+	private static final String TAG = "GameThread";
+	
+	//Constructor
+	public GameThread(SurfaceHolder holder, Stage stage){
+		//Init referenes
+		this.holder = holder;
+		this.stage = stage;
+		//Init Attributes
+		this.lastUpdateTime = System.currentTimeMillis();
+		this.updateTimeDiff = 0l;
+		this.isRunning = false;
+	}
+	
+	//Action Methods
+	@Override
+	public void run(){
+		//Init the Game loop
+		Canvas canvas;
+		Log.d(TAG, "Starting Game Loop...");
+		initTimingElements();
+		
+		//Init FPS variables
+		long beginTime;
+		long timeDiff;
+		int sleepTime;
+		int framesSkipped;
+		sleepTime = 0;
+		
+		//While the thread is running
+		while (isRunning){
+			//Set update times
+			updateTimeDiff = System.currentTimeMillis() - lastUpdateTime;
+			lastUpdateTime = System.currentTimeMillis();
+			
+			//Necessary to lock the canvas
+			canvas = null;
+			
+			try {
+				//Lock the canvas
+				canvas = holder.lockCanvas();
+				
+				//Check if its paused
+				if (GameData.getInstance().isPaused()) {
+					stage.getPanel().displayPauseMessage(canvas);
+					continue;
+				}
+				
+				synchronized(holder){
+					//Init time + frame variables
+					beginTime = System.currentTimeMillis();
+					framesSkipped = 0;
+					
+					//Perform Stage periodic tasks
+					stage.update(updateTimeDiff);
+					stage.render(canvas);
+					
+					//Update the times
+					timeDiff = System.currentTimeMillis() - beginTime;
+					sleepTime = (int)(FRAME_PERIOD - timeDiff);
+					
+					//If we have extra time
+					if (sleepTime > 0) {
+						try {
+							Thread.sleep(sleepTime); //FIX: replace with something else
+						} catch (InterruptedException ie) {}
+					}
+					
+					//If we're behind - update w/o rendering
+					while (sleepTime < 0 && framesSkipped < MAX_FRAME_SKIPS){
+						Log.d(TAG, "Game Skip");
+						stage.update(updateTimeDiff);
+						sleepTime += FRAME_PERIOD;
+						framesSkipped++;
+					}
+					
+					//Update stats
+					framesSkippedPerStatCycle += framesSkipped;
+					storeStats();
+				}
+			//Get rid of any exceptions
+			} catch (Exception e) {
+			} finally {
+				//If canvas exists, unlock it
+				if (canvas != null) {
+					holder.unlockCanvasAndPost(canvas);
+				}
+			}
+		}
+	}
+	
+	//FPS Reading Methods
+	private void initTimingElements(){
+		fpsStore = new double[FPS_HISTORY_NR];
+		for (int i = 0; i < FPS_HISTORY_NR; i++){
+			fpsStore[i] = 0.0;
+		}
+		Log.d(TAG + ".initTimingElements", "Timing Stats Initialized.");
+	}
+	private void storeStats(){
+		frameCountPerStatCycle++;
+		totalFrameCount++;
+		statusIntervalTimer += (System.currentTimeMillis() - statusIntervalTimer);
+		if (statusIntervalTimer >= lastStatusStore + STAT_INTERVAL){
+			double actualFPS = (double)(frameCountPerStatCycle / (STAT_INTERVAL / 1000));
+			fpsStore[(int)statsCount % FPS_HISTORY_NR] = actualFPS;
+			statsCount++;
+			double totalFps = 0.0;
+			for (int i = 0; i < FPS_HISTORY_NR; i++){
+				totalFps += fpsStore[i];
+			}
+			if (statsCount < FPS_HISTORY_NR) {
+				averageFps = totalFps / statsCount;
+			} else {
+				averageFps = totalFps / FPS_HISTORY_NR;
+			}
+			totalFramesSkipped += framesSkippedPerStatCycle;
+			framesSkippedPerStatCycle = 0;
+			statusIntervalTimer = 0;
+			frameCountPerStatCycle = 0;
+			statusIntervalTimer = System.currentTimeMillis();
+			lastStatusStore = statusIntervalTimer;
+			stage.getPanel().setAverageFPS("FPS: " + df.format(averageFps));
+		}
+	}
+	
+	//Set Methods
+	public void setRunning(boolean bool){
+		isRunning = bool;
+	}
+}
+	

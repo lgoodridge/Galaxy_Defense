@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:fillViewport="true" >
+
+	<com.fffan911.galaxy_defense.View.Layouts.BuyWeaponPopupLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/buy_weapon_popup_text_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="20dp" />
+	    
+	    <RadioGroup
+	        android:id="@+id/weapon_slot_radio_group"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	 
+	        <RadioButton
+	            android:id="@+id/weapon_slot_one_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 1" 
+	            android:checked="true" />
+	 
+	        <RadioButton
+	            android:id="@+id/weapon_slot_two_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 2" />
+	        
+	        <RadioButton
+	            android:id="@+id/weapon_slot_three_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 3" />
+	        
+	        <RadioButton
+	            android:id="@+id/weapon_slot_four_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 4" />
+	        
+	        <RadioButton
+	            android:id="@+id/weapon_slot_five_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 5" />
+	        
+	        <RadioButton
+	            android:id="@+id/weapon_slot_six_radio_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Slot 6" />
+	 
+	    </RadioGroup>
+	       
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:weightSum="100" >
+	        
+	        <com.fffan911.galaxy_defense.View.Buttons.ConfirmBuyWeaponButton
+		        android:id="@+id/confirm_buy_weapon_button"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="50"
+		        android:padding="10dp"
+		        android:background="@drawable/green_button_background" />
+	        
+	        <com.fffan911.galaxy_defense.View.Buttons.CloseBuyWeaponButton
+		        android:id="@+id/close_buy_weapon_button"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="50"
+		        android:padding="10dp"
+		        android:background="@drawable/red_button_background" />
+	        
+	    </LinearLayout>
+	
+	</com.fffan911.galaxy_defense.View.Layouts.BuyWeaponPopupLayout>
+
+</ScrollView>

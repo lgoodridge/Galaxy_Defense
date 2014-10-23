@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.BattleSideFragmentLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+    
+    <com.fffan911.galaxy_defense.View.Buttons.PauseButton
+        android:id="@+id/pause_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:background="@drawable/black_button_background" />
+    
+    <com.fffan911.galaxy_defense.View.Customs.ScoreTextView
+        android:id="@+id/score_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <com.fffan911.galaxy_defense.View.Customs.LevelTextView
+        android:id="@+id/level_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <com.fffan911.galaxy_defense.View.Customs.HealthBar
+        android:id="@+id/health_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="6" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="14"
+        android:weightSum="100">
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_one"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_two"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="14"
+        android:weightSum="100">
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_three"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_four"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="14"
+        android:weightSum="100">
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_five"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+        <com.fffan911.galaxy_defense.View.Buttons.WeaponButton
+	        android:id="@+id/weapon_button_six"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:background="@drawable/yellow_button_background" />
+        
+    </LinearLayout>
+    
+    <com.fffan911.galaxy_defense.View.Buttons.FireButton
+        android:id="@+id/fire_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25" />
+
+</com.fffan911.galaxy_defense.View.Layouts.BattleSideFragmentLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.ShopMiscellanyFragmentLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:id="@+id/shop_miscellany_accessory_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_miscellany_accessory_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Other Upgrades:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_miscellany_accessory_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+					        
+				        <LinearLayout
+				            android:id="@+id/shop_miscellany_accessory_items_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+					    
+					    <View
+					        android:id="@+id/shop_miscellany_accessory_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_miscellany_limited_edition_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_miscellany_limited_edition_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Limited Edition:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_miscellany_limited_edition_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+					        
+				        <LinearLayout
+				            android:id="@+id/shop_miscellany_limited_edition_items_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+					    
+					    <View
+					        android:id="@+id/shop_miscellany_limited_edition_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </HorizontalScrollView>
+        
+</com.fffan911.galaxy_defense.View.Layouts.ShopMiscellanyFragmentLayout>

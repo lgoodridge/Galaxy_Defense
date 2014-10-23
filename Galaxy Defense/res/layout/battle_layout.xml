@@ -1,0 +1,29 @@
+<com.fffan911.galaxy_defense.View.Layouts.BattleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <fragment
+        android:id="@+id/battle_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.BattleFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="75"
+        tools:layout="@layout/battle_fragment_layout" >
+        
+    </fragment>
+    
+    <fragment
+        android:id="@+id/battle_side_fragment"
+        android:name="com.fffan911.galaxy_defense.Controller.Fragments.BattleSideFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        tools:layout="@layout/battle_side_fragment_layout" >
+        
+    </fragment>
+
+</com.fffan911.galaxy_defense.View.Layouts.BattleLayout>

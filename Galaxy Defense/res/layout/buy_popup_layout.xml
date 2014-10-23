@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.BuyPopupLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/buy_popup_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp" />
+       
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:weightSum="100" >
+        
+        <com.fffan911.galaxy_defense.View.Buttons.ConfirmBuyButton
+	        android:id="@+id/confirm_buy_button"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:padding="10dp"
+	        android:background="@drawable/green_button_background" />
+        
+        <com.fffan911.galaxy_defense.View.Buttons.CloseBuyButton
+	        android:id="@+id/close_buy_button"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="50"
+	        android:padding="10dp"
+	        android:background="@drawable/red_button_background" />
+        
+    </LinearLayout>
+
+</com.fffan911.galaxy_defense.View.Layouts.BuyPopupLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.InformationFragmentLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blueprint_background"
+    android:orientation="vertical"
+    android:weightSum="100" >
+    
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15" >
+        
+        <LinearLayout
+            android:id="@+id/information_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+        </LinearLayout>
+        
+    </HorizontalScrollView>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85" >
+        
+        <TextView
+            android:id="@+id/information_text_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Select one of the buttons above to view information." />
+        
+    </ScrollView>
+
+</com.fffan911.galaxy_defense.View.Layouts.InformationFragmentLayout>

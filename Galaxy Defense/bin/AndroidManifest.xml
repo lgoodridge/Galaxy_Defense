@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fffan911.galaxy_defense"
+    android:versionCode="1"
+    android:versionName="@string/version_number" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Controller.Activities.TitleScreenActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.Activities.MainMenuActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.fffan911.galaxy_defense.MAIN_MENU_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.Activities.AsteroidsActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.fffan911.galaxy_defense.ASTEROIDS_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.Activities.BattleActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.fffan911.galaxy_defense.BATTLE_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.Activities.ShopActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.fffan911.galaxy_defense.SHOP_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.Activities.BlueprintActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.fffan911.galaxy_defense.BLUEPRINT_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

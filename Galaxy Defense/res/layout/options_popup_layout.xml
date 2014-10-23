@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+    <com.fffan911.galaxy_defense.View.Layouts.OptionsPopupLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/options_popup_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="@string/options_popup_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:weightSum="100" >
+	        
+	        <com.fffan911.galaxy_defense.View.Buttons.CloseOptionsButton
+		        android:id="@+id/close_options_button"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="40"
+		        android:padding="10dp"
+		        android:background="@drawable/black_button_background" />
+	        
+	    </LinearLayout>
+
+	</com.fffan911.galaxy_defense.View.Layouts.OptionsPopupLayout>
+
+</ScrollView>

@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.ShopWeaponsFragmentLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content" >
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_replacements_parent_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_replacements_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Weapons for Sale:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_replacements_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+					        
+				        <LinearLayout
+				            android:id="@+id/shop_standard_weapon_replacements_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:paddingTop="10dp"
+				            android:paddingBottom="5dp"
+				            android:orientation="vertical" >
+				            
+				            <TextView
+					            android:id="@+id/shop_standard_weapon_replacements_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Standard Weapons:" />
+				            
+				        </LinearLayout>
+				        
+				        <TextView
+				            android:id="@+id/shop_special_weapon_replacements_label"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:paddingTop="10dp"
+				            android:paddingLeft="5dp"
+				            android:paddingBottom="5dp"
+				            android:text="Specials:" />
+				        
+				        <LinearLayout
+				            android:id="@+id/shop_special_weapon_replacements_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+	                    
+				        <View
+					        android:id="@+id/shop_weapon_replacements_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+				        
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_special_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_special_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Special:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_special_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_special_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_special_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_special_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_special_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_special_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_special_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_special_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_one_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_one_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot One:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_one_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_one_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_one_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_one_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_one_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_one_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_one_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_one_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_two_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_two_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot Two:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_two_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_two_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_two_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_two_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_two_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_two_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_two_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_tw0_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_three_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_three_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot Three:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_three_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_three_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_three_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_three_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_three_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_three_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_three_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_three_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_four_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_four_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot Four:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_four_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_four_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_four_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_four_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_four_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_four_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_four_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_four_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_five_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_five_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot Five:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_five_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_five_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_five_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_five_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_five_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_five_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_five_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_five_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/shop_weapon_slot_six_layout" 
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView 
+			        android:id="@+id/shop_weapon_slot_six_text_view"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:padding="10dp"
+			        android:text="Slot Six:"	/>
+			    
+			    <View
+			        android:id="@+id/shop_weapon_slot_six_begin_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#ffffff" />
+			    
+			    <ScrollView 
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="vertical">
+				        
+	                    <LinearLayout
+					        android:id="@+id/shop_weapon_slot_six_currently_equipped_layout"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="5dp"
+					        android:orientation="horizontal" >
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_six_currently_equipped_label"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="Currently Equipped:" />
+					        
+					        <TextView
+					            android:id="@+id/shop_weapon_slot_six_currently_equipped_text_view"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical"
+					            android:padding="5dp"
+					            android:text="N/A" />
+					        
+					        <com.fffan911.galaxy_defense.View.Buttons.DetailsButton
+					            android:id="@+id/shop_weapon_slot_six_currently_equipped_details_button"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_gravity="center_vertical" />
+					        
+					    </LinearLayout>
+					    
+	                    <TextView
+					        android:id="@+id/shop_weapon_slot_six_upgrades_text_view"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:paddingTop="10dp"
+					        android:paddingLeft="5dp"
+					        android:paddingBottom="5dp"
+					        android:text="Available Upgrades:" />
+	                    
+				        <LinearLayout
+				            android:id="@+id/shop_weapon_slot_six_upgrades_layout"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="vertical" >
+				            
+				        </LinearLayout>
+				        
+				        <View
+					        android:id="@+id/shop_weapon_slot_six_end_line"
+					        android:layout_width="match_parent"
+					        android:layout_height="1dp"
+					        android:background="#ffffff" />
+	                    
+	                </LinearLayout>
+	                
+	            </ScrollView>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </HorizontalScrollView>
+        
+</com.fffan911.galaxy_defense.View.Layouts.ShopWeaponsFragmentLayout>

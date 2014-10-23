@@ -1,0 +1,24 @@
+<com.fffan911.galaxy_defense.View.Layouts.TitleScreenLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_screen_background" >
+    
+    <TextView
+        android:id="@+id/title_screen_version_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toLeftOf="@+id/title_screen_version_number" />
+    
+    <TextView
+        android:id="@+id/title_screen_version_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version_number"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentRight="true" />
+
+</com.fffan911.galaxy_defense.View.Layouts.TitleScreenLayout>

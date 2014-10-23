@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fffan911.galaxy_defense.View.Layouts.DisplayFragmentLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+    
+    <com.fffan911.galaxy_defense.View.Customs.DisplayPanel
+        android:id="@+id/display_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="15"
+        android:weightSum="100" >
+        
+        <com.fffan911.galaxy_defense.View.Buttons.BlueprintFireButton
+            android:id="@+id/fire_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+        
+        <com.fffan911.galaxy_defense.View.Buttons.SpecialButton
+            android:id="@+id/special_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+        
+    </LinearLayout>
+    
+</com.fffan911.galaxy_defense.View.Layouts.DisplayFragmentLayout >
